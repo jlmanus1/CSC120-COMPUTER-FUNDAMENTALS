@@ -1,0 +1,84 @@
+# Problem 1
+# paste your Python code from Google Colab over the following print statement
+
+scores_list = []
+new_scores = []
+curr_pos = 60
+for i in range(5):
+  score = float(input('enter score 0-100'))
+  scores_list.append(score)
+print(scores_list)
+for score in scores_list:
+  if score < 60:
+    new_score = score + 10
+    new_scores.append(new_score)
+  else:
+    new_scores.append(score)
+print(new_scores)
+new_scores_list = [[x, x+10] for x in scores_list if x < 60]
+print("Student's whose scores have changed:")
+print(new_scores_list)
+
+
+# Problem 2
+# paste your Python code from Google Colab over the following print statement
+
+my_list = []
+n = str
+x = float(input('Enter any number 1-10: '))
+my_list.append(x)
+str = input('Enter another interger? y/n')
+while str != n:
+  x = float(input('Enter any number 1-10: '))
+  my_list.append(x)
+  str = input('Enter another interger? y/n')
+print(my_list)
+
+def Reverse(my_list):
+    return [ele for ele in reversed(my_list)]
+
+elem_moved = my_list[-1:] + my_list[:-1] 
+print(my_list)
+print(max(my_list))
+print(min(my_list))
+print(sum(my_list))
+print(len(my_list))
+print(Reverse(my_list))
+print(elem_moved)
+
+
+# Problem 3
+# paste your Python code from Google Colab over the following print statement
+
+for i in range(5, 22, 4):
+  print(i)
+
+for i in range(26, 4, -7):
+  print(i)
+
+
+# Problem 4
+
+str_dict = {}
+list = []
+chr = input('Enter a string')
+up = chr.upper()
+print(up)
+for chr in up:
+  if chr in str_dict:
+    str_dict[chr] += 1
+  else:
+    str_dict[chr] = 1
+print(str_dict)
+
+target = input('Choose a letter: ')
+if target in up:
+  print(target)
+else:
+  print('not found')
+
+str_dict.pop(target)
+print(str_dict)
+for str in sorted (str_dict.keys()):
+  list.append(str)
+print(list)
